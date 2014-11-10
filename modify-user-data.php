@@ -11,6 +11,7 @@
             include 'Users.php';
 
             /* Récupération de l'ID */
+            global $id;
             $id = $_POST['id'];
 
             /* Création de l'utilisateur en fonction de l'ID */
@@ -26,8 +27,8 @@
 
                 <b>Inscription</b>
 
-                <form action="apply-modifications.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $userid ?>"/>
+                <form action="apply-modifications.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $id ?>"/>
                     <div class="column">
                         <span class="label">Nom d'utilisateur</span>
                         <input type="text" name="username" value="<?php echo $nom ?>" />
@@ -37,7 +38,7 @@
                     </div>
 
                     <p>
-                        <input type="submit" value="S'inscrire" />
+                        <input type="submit" value="Modifier" />
                     </p>			
                 </form>
             </div>
