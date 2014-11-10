@@ -34,7 +34,7 @@
                 }
                 ?>
 
-                <form action ="modify-user-data.php">
+                <form action ="modify-user-data.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $userid ?>"/>
                     <input type="submit" Value="Modifier Informations"/>
                 </form>
