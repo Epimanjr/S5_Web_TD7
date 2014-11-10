@@ -1,0 +1,49 @@
+body{
+  font-family: "Lucida Sans Unicode";
+  color: white;
+  background-image: url("./background.jpg");
+}
+
+input{
+  margin-right: 8px;
+}
+
+#main{
+  position: absolute;
+  left: 50%;
+  width: 800px;
+  margin-left: -400px;
+}
+
+.panel{
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.simplelabel{
+  margin-right: 10px;
+}
+
+.label{
+  display: inline-block;
+  width: 150px;
+}
+
+.genre{
+  display: inline-block;
+  width: 80px;
+}
+
+.error{
+  color: red;
+}
+
+.column{
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: top;
+}
