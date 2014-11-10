@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Base {
+class Base1 {
 
     public function __construct() {
         

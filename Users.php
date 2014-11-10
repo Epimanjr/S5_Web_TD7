@@ -130,7 +130,7 @@ class Users {
      */
     public static function findById($id) {
         /* Connexion à la base de données */
-        $c = Base::getConnection();
+        $c = Base1::getConnection();
 
         /* Préparation de la requête */
         $query = $c->prepare("select * from users where user_id=?");
@@ -144,10 +144,11 @@ class Users {
 
         /* Création d'un Objet */
         $user = new Users();
-        $user->user_id = $d['user_id'];
-        $user->username = $d['username'];
+        $user->user_id = $id;
+        $user->name = $d['name'];
         $user->password = $d['password'];
         $user->email = $d['email'];
+        $user->gets_emails = $d['gets_emails'];
 
         return $user;
     }
