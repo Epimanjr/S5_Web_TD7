@@ -26,7 +26,8 @@
 
                 <b>Inscription</b>
 
-                <form action="registration.php" method="post">
+                <form action="apply-modifications.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $userid ?>"/>
                     <div class="column">
                         <span class="label">Nom d'utilisateur</span>
                         <input type="text" name="username" value="<?php echo $nom ?>" />
