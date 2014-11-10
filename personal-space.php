@@ -32,6 +32,11 @@
                     echo "Connecté !";
                 afficheUtilisateur($id);
                 ?>
+                
+                <form action ="modify-user-data.php">
+                    <input type="hidden" name=<?php "$id" ?>/>
+                    <input type="submit" name="Modifier"/>
+                </form>
 
             </div>
         </div>
@@ -56,5 +61,12 @@ function afficheUtilisateur($id) {
     $row = mysql_fetch_row($resquery);
 
     /* Parcours du tableau pour afficher ses genres */
+    echo "</br>Mes genres :";
+    foreach($row as $i => $value) {
+        echo "<ul>";
+        echo "<li>" . $value . "</li>";
+        echo "</ul>";
+    }
 }
+
 ?>
