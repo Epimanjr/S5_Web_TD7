@@ -28,16 +28,17 @@
                 $row = mysql_fetch_row($resquery);
                 if (!$row[0]) {
                     echo "Erreur.";
-                } else #
+                } else {
                     echo "Connecté !";
-                afficheUtilisateur($id);
+                    afficheUtilisateur($id);
+                }
                 ?>
-                
+
                 <form action ="modify-user-data.php">
                     <input type="hidden" name="id" value="<?php echo $userid ?>"/>
                     <input type="submit" Value="Modifier Informations"/>
                 </form>
-                
+
             </div>
         </div>
     </body>
@@ -56,21 +57,20 @@ function afficheUtilisateur($id) {
         echo "</br>Recevoir les emails : Oui";
     }
 
-    
+
     global $userid;
     $userid = $row[2];
-    
+
     /* Requête pour sélectionner tous les genres choisis par l'utilisateur */
     $resquery = mysql_query("SELECT genre FROM users_genres WHERE user_id=" . $row[2]);
     $row = mysql_fetch_row($resquery);
 
     /* Parcours du tableau pour afficher ses genres */
     echo "</br>Mes genres :";
-    foreach($row as $i => $value) {
+    foreach ($row as $i => $value) {
         echo "<ul>";
         echo "<li>" . $value . "</li>";
         echo "</ul>";
     }
 }
-
 ?>
