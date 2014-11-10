@@ -15,7 +15,6 @@
 
                 /* Script qui permet de vérifier que le nom d'utilisateur et le mot de passe figurent dans la base de données */
                 include 'base.php';
-                echo "BONJOUR";
 
                 /* Récupération des variables du formulaire */
                 $id = $_POST['id'];
@@ -30,7 +29,7 @@
                 if (!$row[0]) {
                     echo "Erreur.";
                 } else #
-                    echo "Done.";
+                    echo "Connecté !";
                     afficheUtilisateur($id);
                 ?>
 
@@ -42,10 +41,15 @@
 <?php
 
 function afficheUtilisateur($id) {
-    $resquery = mysql_query("SELECT email, gets_emails FROM users WHERE name='" . $id . "'");
+    $resquery = mysql_query("SELECT email, gets_emails, user_id FROM users WHERE name='" . $id . "'");
     $row = mysql_fetch_row($resquery);
-    echo $row[0];
-    echo $row[1];
+    echo "</br>Nom d'utilisateur : " . $id;
+    echo "</br>Email : " . $row[0];
+    if ($row[1] == 0) {
+        echo "</br>Recevoir les emails : Non";
+    } else {
+        echo "</br>Recevoir les emails : Oui";
+    }
 }
 
 ?>
