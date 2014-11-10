@@ -13,4 +13,6 @@ $user->email = $_POST['email'];
 
 $user->update();
 
+echo "Votre profil a été mis à jour.";
+
 ?>

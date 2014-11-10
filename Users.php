@@ -89,7 +89,7 @@ class Users {
 
             /* Préparation de la requête */
             $query = $c->prepare("update users set name= ?, password= ?, email= ? where user_id=?");
-            $query->bindParam(1, $this->username, PDO::PARAM_STR);
+            $query->bindParam(1, $this->name, PDO::PARAM_STR);
             $query->bindParam(2, $this->password, PDO::PARAM_STR);
             $query->bindParam(3, $this->email, PDO::PARAM_STR);
             $query->bindParam(4, $this->user_id, PDO::PARAM_INT);
