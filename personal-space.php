@@ -34,8 +34,8 @@
                 ?>
                 
                 <form action ="modify-user-data.php">
-                    <input type="hidden" name="id" value=<?php "$id" ?>/>
-                    <input type="submit" name="Modifier"/>
+                    <input type="hidden" name="id" value=<?php $id ?>/>
+                    <input type="submit" Value="Modifier Informations"/>
                 </form>
 
             </div>
