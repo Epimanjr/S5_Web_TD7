@@ -9,7 +9,7 @@
   $dbuser = "root";
   
   // Password (not used here)
-  $dbpass = "password";
+  $dbpass = "";
  
   mysql_connect($dbhost, $dbuser) or die("Erreur MySQL : ".mysql_error());
   mysql_select_db($dbname) or die("Erreur MySQL : ".mysql_error());
