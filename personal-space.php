@@ -30,7 +30,7 @@
                     echo "Erreur.";
                 } else #
                     echo "Connecté !";
-                    afficheUtilisateur($id);
+                afficheUtilisateur($id);
                 ?>
 
             </div>
@@ -50,6 +50,11 @@ function afficheUtilisateur($id) {
     } else {
         echo "</br>Recevoir les emails : Oui";
     }
-}
 
+    /* Requête pour sélectionner tous les genres choisis par l'utilisateur */
+    $resquery = mysql_query("SELECT genre FROM users_genres WHERE user_id=" . $row[2]);
+    $row = mysql_fetch_row($resquery);
+
+    /* Parcours du tableau pour afficher ses genres */
+}
 ?>
